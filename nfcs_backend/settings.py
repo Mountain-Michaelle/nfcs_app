@@ -199,5 +199,4 @@ DJOSER = {
         'user_delete': 'djoser.serializers.UserDeleteSerializer',
     }
 }
-
 AUTH_USER_MODEL = 'blogApi.UserAccount'
