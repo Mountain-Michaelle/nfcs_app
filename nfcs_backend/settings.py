@@ -82,16 +82,22 @@ WSGI_APPLICATION = 'nfcs_backend.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'nfcs_backend',
+#         'USER': 'postgres',
+#         'PASSWORD': '41240075',
+#         'HOST': '127.0.0.1',
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'nfcs_backend',
-        'USER': 'postgres',
-        'PASSWORD': '41240075',
-        'HOST': '127.0.0.1',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-
 
 ###Email Backend
 
