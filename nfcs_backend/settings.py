@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-4jx94a1*zs1qdee_m11(d6-h7-oalj-!9^e*w)2xe9_15l&0r@
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG', 'True') == 'True'
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost:3000', 'localhost', 'nfcs-app.onrender.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost:3000', 'localhost', 'nfcs-app.onrender.com', "nfcsstaugustineimt.onrender.com"]
     
 # Application definition
 
