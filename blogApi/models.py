@@ -29,13 +29,15 @@ class UserAccount(AbstractBaseUser, PermissionsMixin):
     email = models.EmailField(max_length=255, unique=True)
     name = models.CharField(max_length=255)
     is_active = models.BooleanField(default=True)
+    phone = models.CharField(max_length=13)
     is_staff = models.BooleanField(default=False)
+    is_alumni = models.BooleanField(default=False)
+    is_student = models.BooleanField(default=False)
+    visitors = models.BooleanField(default=True, null=True)
     
     objects = UserAccountManager()
-    
     USERNAME_FIELD= 'email'
     REQUIRED_FIELDS = ['name']
-    
     
     def get_full_name(self):
         return self.name

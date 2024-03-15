@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-4jx94a1*zs1qdee_m11(d6-h7-oalj-!9^e*w)2xe9_15l&0r@
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG', 'True') == 'True'
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'nfcs-app.onrender.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost:3000', 'localhost', 'nfcs-app.onrender.com']
     
 # Application definition
 
@@ -92,18 +92,20 @@ WSGI_APPLICATION = 'nfcs_backend.wsgi.application'
 #     }
 # }
 
-if not DEBUG:
-    DATABASES = {
-        'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
-    }
+# if not DEBUG:
+#     DATABASES = {
+#         'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+#     }
     
-else:
-     DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        }
-    }
+# else:
+
+
+DATABASES = {
+'default': {
+    'ENGINE': 'django.db.backends.sqlite3',
+    'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+}
+}
     
     
 
@@ -171,10 +173,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 ### Cors header permissions
 CORS_ALLOW_ALL_ORIGINS = True
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",
-
-]
 
 ## Settings for default authentication model
 
